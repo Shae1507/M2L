@@ -1,4 +1,4 @@
-.clear{clear: both;}
+
 h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
@@ -1042,12 +1042,9 @@ li.youtube a span {
   float: left;
   	margin-top: 3em;
 }
-.copy p{
+.copy  p, a{
 	font-size:0.8125em;
 	font-weight:600;
-	color:#B8B6B6;
-}
-.copy p a{
 	color:#fff;
 }
 .footer_bottom{
@@ -2243,3 +2240,32 @@ color: #FFF;
 .tftable tr:hover {background-color:#ffffff;}
 
 /* Fin tableau admin*/
+
+.foot {
+	margin-top: 6em;
+}
+
+.partForm {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.formulaire {
+	padding-top: 6em;
+}
+
+.lab {
+	margin-left: 10px;
+}
+
+.endInfoPerso {
+	padding-bottom: 2em;
+}
+
+.btnInscript {
+	margin-bottom: 2em;
+}
+
+.inscrire {
+	text-align: center;
+}

@@ -2,64 +2,42 @@
 
 if (isset($_SESSION['pseudo']) && empty($_POST['pseudo']) || empty($_POST['password']) && empty($_GET['deco']) ) //On est dans la page de formulaire
 {	
+include 'header.php';
+?>
+<title>Connexion</title>
+	<div class="main">
+		<div class="container">
+		 	<div class="row">
+		 		<div class="col-lg-12 formulaire">
+					<form action="connexion.php" method="POST" class="well">
+						<legend>Connexion</legend>
+						<fieldset>
+							<div class="row partForm">
+                				<div class="form-group">
+                  					<label for="textarea" class="col-lg-1 control-label lab">Pseudo:</label>
+                  						<div class="col-lg-3">
+                   							<input type="textarea" name="pseudo" class="form-control" id="textarea">
+               							</div>
+               						<label for="textarea" class="col-lg-2 control-label">Mot de passe:</label>
+                  						<div class="col-lg-3">
+                   							<input type="password" name="password" class="form-control" id="textarea">
+               							</div>
 
-	include 'header.php';
+               					<button class="btn btn-dark btnInscript" type="submit">Envoyer</button>
+               					</div>
+           					</div>
+               				<div class="inscrire">
+               				<h5>Pas encore de compte ?</h5>
+               				<button class="btn btn-dark" ><a href="inscription.php">Inscrivez vous</a></button>
+						</fieldset>
+					</form>
+				</div>
+		   	</div>
+	  	</div>
+   	</div>
 
-
-		echo " 
-			<title>Connexion</title>
- <div class='main'>
-			      	  <div class='shop_top' style='padding: 8% 0;'>
-			      			<div class='container'>
-		                        <div class='main'>
-		      <div class='shop_top'>
-				<div class='container'>
-					<div class='col-md-6'>
-						 <div class='login-page'>
-							<h4 class='title'>Pas encore de compte?</h4>
-							<div class='button1'>
-							   <a href='inscription.php'><input type='submit' name='Submit' value='Créer un compte'></a>
-							 </div>
-							 <div class='clear'></div>
-						  </div>
-						</div>
-						<div class='col-md-6'>
-						 <div class='login-title'>
-			           		<h4 class='title'>Connexion</h4>
-							<div id='loginbox' class='loginbox'>
-								<form action='#popup1' method='post' name='login' id='login-form'>
-								  <fieldset class='input'>
-								    <p id='login-form-username'>
-								      <label for='modlgn_username'>Pseudo</label>
-								      <input id='modlgn_username' type='text' name='pseudo' class='inputbox' size='18' autocomplete='off'>
-								    </p>
-								    <p id='login-form-password'>
-								      <label for='modlgn_passwd'>Mot de passe</label>
-								      <input id='modlgn_passwd' type='password' name='password' class='inputbox' size='18' autocomplete='off'>
-								    </p>
-								    <div class='remember'>
-									    <p id='login-form-remember'>
-									      <label for='modlgn_remember'><a href='#'>Mot de passe oublié ? </a></label>
-									   </p>
-									    <input type='submit' name='Submit' class='button' value='Connexion'><div class='clear'></div>
-									 </div>
-								  </fieldset>
-								 </form>
-							</div>
-					      </div>
-						 <div class='clear'></div>
-					  </div>
-					</div>
-				  </div>
-			  </div>
-		      				
-
-						</div>
-					</div>
-				</div>  "; 
-
-	include 'footer.php';
-
+<?php
+include 'footer.php';
 }
 else
 {
