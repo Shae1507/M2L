@@ -9,7 +9,7 @@ $id = $_GET["id"];
 
 
 
-if (isset($_POST['pseudo']))	{
+if (isset($_POST['envoyer']))	{
 
 	$nom = $_POST["nom"];
 	$prenom = $_POST["prenom"];
@@ -23,214 +23,73 @@ if (isset($_POST['pseudo']))	{
 	      						nom ='$nom',
 	      						prenom='$prenom', 
 	      						email='$email', 
-	      						telephone='$telephone', 
+	      						telephone='$telephone',
 	      						mdp='$mdp'
 	      						where id = $id ");
 	      $query->execute();
-
-
-		echo "
-					<title>Modif </title>
-
-		<div id='popup1' class='overlay'>
-	<div class='popup'>
-		<h2>Modification</h2>
-		<a class='close' href='admin.php'>&times;</a>
-		<div class='content'>
-		Vous avez bien modifié l'utilisateur ". $pseudo ."
-		</div>
-	</div>
-</div>
-
- <div class='main'>
-      <div class='shop_top'>
-	     <div class='container'>
-
-						<form action='#popup1' method='POST'> 
-								<div class='register-top-grid'>
-										<h3>Informations personnelles</h3>
-										<div>
-											<span>Nom<label>*</label></span>
-											<input type='text' name='nom' value=' ". $donnees['nom'] ." '> 
-										</div>
-										<div>
-											<span>Prénom<label>*</label></span>
-											<input type='text' name='prenom' value='". $donnees['prenom'] ." '> 
-										</div>
-										<div>
-											<span>Adresse mail<label>*</label></span>
-											<input type='text' name='email' value='". $donnees['email'] ." '> 
-										</div>
-										<div>
-											<span>Téléphone<label>*</label></span>
-											<input type='text' name='telephone' value='". $donnees['telephone'] ." '> 
-										</div>
-										<div class='clear'> </div>
-											
-										<div class='clear'> </div>
-								</div>
-								<div class='clear'> </div>
-								<div class='register-bottom-grid'>
-										<h3>Vous enregistrer</h3>
-										<div>
-											<span>Mot de passe<label>*</label></span>
-											<input type='text' name='mdp' value='". $donnees['mdp'] ." '> 
-										</div>
-										<div>
-											<span>Confirmer votre mot de passe<label>*</label></span>
-											<input type='text' name='mdp' value='". $donnees['mdp'] ." '> 
-										</div>
-										<div>
-											<span>Pseudo<label>*</label></span>
-											<input type='text' name='pseudo'value='". $donnees['pseudo'] ." '> 
-										</div>
-										<div class='clear'> </div>
-								</div>
-								<div class='clear'> </div>
-								<input type='submit' value='Envoyer'>
-						</form>
-					</div>
-		   </div>
-	  </div>
-
-";
+	header('location:admin.php');
  }  
 
  elseif (isset($_GET['del'])){
 
-//&amp; 
-
-echo "
-					<title>Modif </title>
-
-		<div id='popup1' class='overlay'>
-	<div class='popup'>
-		<h2>Modification</h2>
-		<a class='close' href='admin.php'>&times;</a>
-		<div class='content'>
-		Vous avez bien supprimé l'utilisateur ". $donnees['pseudo'] ."
-		</div>
-	</div>
-</div>
-
- <div class='main'>
-      <div class='shop_top'>
-	     <div class='container'>
-
-						<form action='#popup1' method='POST'> 
-								<div class='register-top-grid'>
-										<h3>Informations personnelles</h3>
-										<div>
-											<span>Nom<label>*</label></span>
-											<input type='text' name='nom' value=' ". $donnees['nom'] ." '> 
-										</div>
-										<div>
-											<span>Prénom<label>*</label></span>
-											<input type='text' name='prenom' value='". $donnees['prenom'] ." '> 
-										</div>
-										<div>
-											<span>Adresse mail<label>*</label></span>
-											<input type='text' name='email' value='". $donnees['email'] ." '> 
-										</div>
-										<div>
-											<span>Téléphone<label>*</label></span>
-											<input type='text' name='telephone' value='". $donnees['telephone'] ." '> 
-										</div>
-										<div class='clear'> </div>
-											<a class='news-letter' href='#'>
-												<label class='checkbox'><input type='checkbox' name='checkbox' checked=''><i> </i>Reçevoir notre Newsletter</label>
-											</a>
-										<div class='clear'> </div>
-								</div>
-								<div class='clear'> </div>
-								<div class='register-bottom-grid'>
-										<h3>Vous enregistrer</h3>
-										<div>
-											<span>Mot de passe<label>*</label></span>
-											<input type='text' name='mdp' value='". $donnees['mdp'] ." '> 
-										</div>
-										<div>
-											<span>Confirmer votre mot de passe<label>*</label></span>
-											<input type='text' name='mdp' value='". $donnees['mdp'] ." '> 
-										</div>
-										<div>
-											<span>Pseudo<label>*</label></span>
-											<input type='text' name='pseudo'value='". $donnees['pseudo'] ." '> 
-										</div>
-										<div class='clear'> </div>
-								</div>
-								<div class='clear'> </div>
-								<input type='submit' value='Envoyer'>
-						</form>
-					</div>
-		   </div>
-	  </div>
-
-";
-
  		$query=$bdd->prepare("DELETE
         FROM membres WHERE id = $id"); 
         $query->execute();
-}	
+        header('location:admin.php');
+}
+?>
+<title>Modif </title>
+<div class="main">
+		<div class="container">
+		 	<div class="row">
+		 		<div class="col-lg-12 formulaire">
+					<form action="modif.php?id=<?=$donnees["id"]?>" method="POST" class="well">
+						<legend>Modifier le profil</legend>
+						<fieldset>
+							<div class="row partForm">
+                				<div class="form-group">
+                  					<label for="textarea" class="col-lg-2 control-label lab">Nom :</label>
+                  						<div class="col-lg-3">
+                   							<input type="textarea" name="nom" class="form-control" id="textarea" value="<?= $donnees['nom'] ?>">
+               							</div>
+               						<label for="textarea" class="col-lg-2 control-label">Prenom :</label>
+                  						<div class="col-lg-3">
+                   							<input type="textarea" name="prenom" class="form-control" id="textarea" value="<?= $donnees['prenom'] ?>">
+               							</div>
+               					</div>
+           					</div>
+           					<div class="row partForm">
+                				<div class="form-group">
+                  					<label for="textarea" class="col-lg-2 control-label lab">Adresse mail :</label>
+                  						<div class="col-lg-3">
+                   							<input type="email" name="email" class="form-control" id="textarea" value="<?=$donnees['email'] ?>">
+               							</div>
+               						<label for="textarea" class="col-lg-2 control-label">Téléphone :</label>
+                  						<div class="col-lg-3">
+                   							<input type="textarea" name="telephone" class="form-control" id="textarea" value="<?= $donnees['telephone']?>">
+               							</div>
+               					</div>
+           					</div>
+							<div class="row partForm">
+								<div class="form-group">
+               						<label for="textarea" class="col-lg-2 control-label lab">Pseudo :</label>
+                  							<div class="col-lg-3">
+                   								<input type="textarea" name="pseudo" class="form-control" id="textarea" value="<?= $donnees['pseudo'] ?>">
+               								</div>
+               					</div>
+               				</div>
+               				<div class="cachee">
+               					<input type="textarea" name="mdp" class="form-control" id="textarea" value="<?= $donnees['mdp'] ?>">
+               				</div>
+               				<button class="btn btn-dark" type="submit" name="envoyer">Envoyer</button>
+               				<button class="btn btn-dark retour" type="submit"><a href="admin.php">Retour</a></button>
+						</fieldset>
+					</form>
+				</div>
+		   	</div>
+	  	</div>
+   	</div>
 
- else{
- 	echo "
-
-			<title>Modif </title>
-
- <div class='main'>
-      <div class='shop_top'>
-	     <div class='container'>
-
-												<form action='#popup1' method='POST'> 
-								<div class='register-top-grid'>
-										<h3>Informations personnelles</h3>
-										<div>
-											<span>Nom<label>*</label></span>
-											<input type='text' name='nom' value=' ". $donnees['nom'] ." '> 
-										</div>
-										<div>
-											<span>Prénom<label>*</label></span>
-											<input type='text' name='prenom' value='". $donnees['prenom'] ." '> 
-										</div>
-										<div>
-											<span>Adresse mail<label>*</label></span>
-											<input type='text' name='email' value='". $donnees['email'] ." '> 
-										</div>
-										<div>
-											<span>Téléphone<label>*</label></span>
-											<input type='text' name='telephone' value='". $donnees['telephone'] ." '> 
-										</div>
-										<div class='clear'> </div>
-											<a class='news-letter' href='#'>
-												<label class='checkbox'><input type='checkbox' name='checkbox' checked=''><i> </i>Reçevoir notre Newsletter</label>
-											</a>
-										<div class='clear'> </div>
-								</div>
-								<div class='clear'> </div>
-								<div class='register-bottom-grid'>
-										<h3>Vous enregistrer</h3>
-										<div>
-											<span>Mot de passe<label>*</label></span>
-											<input type='text' name='mdp' value='". $donnees['mdp'] ." '> 
-										</div>
-										<div>
-											<span>Confirmer votre mot de passe<label>*</label></span>
-											<input type='text' name='mdp' value='". $donnees['mdp'] ." '> 
-										</div>
-										<div>
-											<span>Pseudo<label>*</label></span>
-											<input type='text' name='pseudo'value='". $donnees['pseudo'] ." '> 
-										</div>
-										<div class='clear'> </div>
-								</div>
-								<div class='clear'> </div>
-								<input type='submit' value='Envoyer'>
-						</form>
-					</div>
-		   </div>
-	  </div>";}
-   
-
+<?php
  include 'footer.php'; 
-    $query->CloseCursor();?> 
+ ?> 

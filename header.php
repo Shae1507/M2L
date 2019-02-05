@@ -18,8 +18,8 @@ $bdd = new PDO('mysql:host=localhost;dbname=m2l_bd1;charset=utf8', 'root', '');
 
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
-<link href="css/circle.css" rel='stylesheet' />
 <link rel='stylesheet' href='css/popup.css'>
+<link href="css/circle.css" rel='stylesheet' />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

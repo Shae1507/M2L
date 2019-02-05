@@ -15,13 +15,13 @@
 <li>Comparatif d'hebergement&nbsp;</li>
 <li>Contrat de travail, BADJI Yassin et BOURET Lou</li>
 <li>Le contrat de conception et de maintenance</li>
-<li>Contrat d'h&eacute;bergement web</li>
+<li>Contrat d'hébergement web</li>
 <li>GANTT</li>
 <li>Le Devis</li>
-<li>La base de donn&eacute;e&nbsp;</li>
+<li>La base de donnée&nbsp;</li>
 <li>Le cahier des charges&nbsp;</li>
 <li>La documentation technique&nbsp;</li>
-<li>Pr&eacute;sentation du prestataire</li>
+<li>Présentation du prestataire</li>
 </ul>
 </p></p></br>
 <input type="button" value="Télécharger" onclick="window.location='http://m2l.badji.fr/doc_m2l.zip';"></br></br>

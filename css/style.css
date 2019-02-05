@@ -1042,7 +1042,13 @@ li.youtube a span {
   float: left;
   	margin-top: 3em;
 }
-.copy  p, a{
+.copy  p {
+	font-size:0.8125em;
+	font-weight:600;
+	color:#fff;
+}
+
+.copy a {
 	font-size:0.8125em;
 	font-weight:600;
 	color:#fff;
@@ -2268,4 +2274,34 @@ color: #FFF;
 
 .inscrire {
 	text-align: center;
+}
+
+.cachee {
+	display: none;
+}
+
+.retour {
+	float: right;
+}
+
+.membresTable {
+	margin-top: 4em;
+}
+
+.nomTable {
+	color: black;
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.spaceClass {
+	padding-bottom: 15px;
+}
+
+.titreService {
+	padding-top: 3em;
+}
+
+.finance {
+	padding-bottom:6em;
 }

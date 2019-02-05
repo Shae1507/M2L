@@ -1,10 +1,9 @@
 <?php include 'header.php'; ?> <html>
 <title>Team</title>
-	  <div class="main">
-      <div class="shop_top">
-		<div class="container">
-			<div class="row team_box">
-				<h3 class="western" style="color: #FF4500">Notre équipe</h3> <br />
+<div class="container-fluid">
+    <div class="row">
+      	<div class="col-lg-10 col-lg-offset-1">
+				<h2 class="western titreService spaceClass" style="color: #FF4500">Notre équipe</h2>
 				<div class="col-md-3 team1">
 				  <a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/lucien_sapin.jpg" class="img-responsive" title="continue" alt=""/></a>
 					<h4 class="m_5" style="font-weight:600; text-align: center;">Lucien Sapin</h4>
@@ -33,10 +32,7 @@
 				    <p style="font-size: 0.8em; text-align: justify;">C'est elle qui gère notre budget ! Elle attribue un budget pour chacune des ligues de sports que nous acceuillons, et fait les différentes démarches pour trouver bénévoles et partenaires qui seraient intéressés pour nous suivre.</p>
 				    <p style="font-size: 0.8em; text-align: justify;">Elle gère aussi les différents déplacements que nous pouvons effectuer, que ce soit pour les rencontres amicales ou les championnats.</p>
 				</div>
-			</div>
 		</div>
-	   </div>
-	  </div>
-	 </html><?php include 'footer.php'; ?> <html>
-</body>	
-</html>
+	</div>
+</div>
+<?php include 'footer.php'; ?>
