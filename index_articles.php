@@ -5,18 +5,18 @@
 			  <div class="row">
           <hr>
 				<div class="col-md-3 top_box">
-				  <div class="view view-ninth"><a href="404.php">
+				  <div class="view view-ninth"><a href="formations.php">
                     <img src="images/pic1.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
-                        <h2>Nos coachs</h2>
-                        <p>Venez vous formez auprès de professionel du sport.</p>
+                        <h2>Nos formations</h2>
+                        <p>Venez vous inscrire à de nombreuses formations sur le thème du sport.</p>
                       </div>
                    </a> </div
                   </div>
                   <h4 class="m_4"><a href="#">Formations</a></h4>
-                  <p class="m_5">Decouvrez nos offres!</p>
+                  <p class="m_5">Decouvrez-les!</p>
                 </div>
                 <div class="col-md-3 top_box">
 					<div class="view view-ninth"><a href="presentation.php">
@@ -24,7 +24,7 @@
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
-                        <h2>Exclusive</h2>
+                        <h2>Exclusif</h2>
                         <p>Decouvrez une interview de notre président.</p>
                       </div>
                     </a> </div>
@@ -45,17 +45,17 @@
                    <p class="m_5">Rejoignez-nous</p>
 				</div>
 				<div class="col-md-3 top_box1">
-					<div class="view view-ninth"><a href="404.php">
+					<div class="view view-ninth"><a href="connexion.php">
                     <img src="images/pic4.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>
                     <div class="mask mask-2"> </div>
                       <div class="content">
                         <h2>Inscription</h2>
-                        <p>Inscrivez-vous à nos sessions théoriques et pratiques.</p>
+                        <p>Inscrivez-vous à notre site pour plus de contenu</p>
                       </div>
                      </a> </div>
-                   <h4 class="m_4"><a href="#">Arbitrage</a></h4>
-                   <p class="m_5">Devenez arbitre!</p>
+                   <h4 class="m_4"><a href="#">Inscription</a></h4>
+                   <p class="m_5">Venez découvrir nos exclues membres!</p>
 				</div>
 			</div>
       <hr>

@@ -6,12 +6,13 @@
 			           <p>Site fictif</p>
 			        </div>
 			        <div class="copy col-lg-4">
-			           <a href="mentions_legales.php">Mentions légales</a> |
+			           <a href="mentions_legales.php" class="mention">Mentions légales</a> |
 			           <?php 
 							if (!isset($_SESSION['pseudo'])) { echo "<a href='connexion.php'>Connexion</a></p>"; }
 	   						else { 	
 		 						if ( $data['rang'] == 2){ 
-		 							echo "<a href='admin.php'>Admin</a> | <a href='connexion.php?deco=1#popup1'>Deconnexion</a></p>";
+		 							?><a href='admin.php'>Admin</a> <br /> <a href="gestionFormation.php">Gestion Formation</a> | <a href='connexion.php?deco=1#popup1'>Deconnexion</a></p>
+		 							<?php
 		 						}
 								else {
 				 					echo " <a href='connexion.php?deco=1#popup1'>Deconnexion</a></p>"; 

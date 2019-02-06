@@ -63,6 +63,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=m2l_bd1;charset=utf8', 'root', '');
  										<button class="dropbtn">Services</button>
   											<div class="dropdown-content">
   												<a href="services.php">Prestations</a>
+  												<a href="formations.php">Formations</a>
   											</div>
 									</div>
 								</li>
