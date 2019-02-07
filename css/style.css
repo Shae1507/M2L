@@ -2317,3 +2317,12 @@ color: #FFF;
 .space {
 	padding-top: 11em;
 }
+
+.tabNomsTables {
+	text-align: center;
+}
+
+.aNomTable:hover {
+	font-size: 120%;
+	text-decoration: none;
+}

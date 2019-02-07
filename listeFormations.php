@@ -31,7 +31,7 @@ $query=$con->prepare("SELECT * FROM formation, participant where participant.pse
              <?php
         		while ($donnees = $query->fetch())
         		{
-        		?><tr>
+        		?><tr class="aNomTable">
         			<td class="cachee"><?=$donnees["id_formation"] ?></td>
 					<td><?=$donnees["description"]?></td>
 					<td><?=$donnees["debut_cours"]?></td>

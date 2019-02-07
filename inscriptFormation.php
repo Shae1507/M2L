@@ -1,6 +1,8 @@
 <?php
 include 'header.php';
-$con = new PDO('mysql:host=localhost;dbname=gestion_formations;charset=utf8', 'root', '');
+include 'functions.php';
+
+$con = con();
 
 $id = $_GET["id_formation"];
 	$pseudo = $_SESSION["pseudo"];

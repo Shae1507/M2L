@@ -1,11 +1,9 @@
 <?php 
 include 'header.php';
 include 'access2.php';
+include 'functions.php';
 
-$con = new PDO('mysql:host=localhost;dbname=gestion_formations;charset=utf8', 'root', '');
-
-$query=$con->prepare('SELECT * FROM formation'); 
-        $query->execute();
+$query= formations();
 ?>
 <title>Formations</title>
 <body>
