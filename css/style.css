@@ -2292,6 +2292,7 @@ color: #FFF;
 	color: black;
 	font-weight: 600;
 	font-size: 25px;
+	padding-bottom: 20px;
 }
 
 .spaceClass {
@@ -2320,9 +2321,33 @@ color: #FFF;
 
 .tabNomsTables {
 	text-align: center;
+	max-width: 100%;
 }
 
 .aNomTable:hover {
-	font-size: 120%;
 	text-decoration: none;
+}
+
+.questionnaire {
+	padding-top: 2em;
+	text-align: center;
+
+}
+
+.questionnaire input{
+	float: none !important;
+}
+
+.titleQuest {
+	padding-bottom: 15px;
+}
+
+.retourTable {
+	float: right;
+	margin-right: 1em;
+	text-align: center;
+}
+
+.modif {
+	text-align: center;
 }

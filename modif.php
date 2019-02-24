@@ -4,8 +4,7 @@ $id = $_GET["id"];
 	    $query=$bdd->prepare("SELECT *
         FROM membres WHERE id = $id"); 
         $query->execute();
-        $donnees = $query->fetch(); 
-
+        $donnees = $query->fetch();
 
 
 
@@ -82,7 +81,7 @@ if (isset($_POST['envoyer']))	{
                					<input type="textarea" name="mdp" class="form-control" id="textarea" value="<?= $donnees['mdp'] ?>">
                				</div>
                				<button class="btn btn-dark" type="submit" name="envoyer">Envoyer</button>
-               				<button class="btn btn-dark retour" type="submit"><a href="admin.php">Retour</a></button>
+                      <a href="admin.php" class="btn btn-primary retour" role="button">Retour</a>
 						</fieldset>
 					</form>
 				</div>

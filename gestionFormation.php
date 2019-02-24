@@ -12,7 +12,7 @@ include 'functions.php';
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 spaceClass">
             <table class="table table-bordered table-striped tabNomsTables">
              <caption class="membresTable">
               <h4 class="nomTable">Gestion des formations</h4>
@@ -35,12 +35,14 @@ include 'functions.php';
         	?>
             </tbody>
           </table>
+        <div class="row">
+          <a href="index.php" class="btn btn-primary retourTable" role="button">Retour</a>
         </div>
-      </div>
-      <div class="row space">
+        </div>
       </div>
   	</div>
   </div>
+  <br />
 </div>
 </body>
 <?php 

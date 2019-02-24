@@ -12,18 +12,18 @@ $query= formations();
       <div class="col-lg-10 col-lg-offset-1">
         <div class="row">
           <div class="col-lg-12">
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped modif">
              <caption class="membresTable">
               <h4 class="nomTable">Les formations disponibles</h4>
             </caption>
             <thead>
               <tr class="info">
               	<th class="cachee">Id</th>
-                <th> Description </th>
-                <th>Date de début</th>
-                <th>Date de fin</th>
-                <th>Coût (en euros)</th>
-                <th>S'inscrire</th>
+                <th class="modif"> Description </th>
+                <th class="modif">Date de début</th>
+                <th class="modif">Date de fin</th>
+                <th class="modif">Coût (en euros)</th>
+                <th class="modif">S'inscrire</th>
               </tr>
             </thead>
             <tbody>

@@ -54,6 +54,7 @@
                					</div>
                				</div>
                				<button class="btn btn-dark" type="submit">Envoyer</button>
+                      <a href="connexion.php" class="btn btn-primary retour" role="button">Retour</a>
 						</fieldset>
 					</form>
 				</div>
