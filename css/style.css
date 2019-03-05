@@ -2351,3 +2351,47 @@ color: #FFF;
 .modif {
 	text-align: center;
 }
+
+a.top_link {
+  background-color: #ccc; 
+  bottom : 30px;
+  color: #333;
+  display : none; 
+  opacity : 0.95; 
+  filter: alpha(opacity=95);
+  padding : 10px;
+  position : fixed;
+  right : 70px;
+  z-index : 15;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+a.deconnect_link {
+  background-color: #ccc; 
+  bottom : 30px;
+  color: #333;
+  display : none; 
+  opacity : 0.95; 
+  filter: alpha(opacity=95);
+  padding : 10px;
+  position : fixed;
+  right : 15px;
+  z-index : 15;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+a.top_link i {
+	padding-left: 7px;
+	padding-top: 5px;
+	width: 60px;
+}
+
+a.deconnect_link i {
+	padding-left: 7px;
+	padding-top: 5px;
+	width: 60px;
+}

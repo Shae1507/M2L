@@ -86,7 +86,8 @@ else
     }
 
     if (isset($_GET['deco'])){
-	    	
+	
+	$_SESSION = [];
 	session_destroy(); 
 	header("location: index.php");
 	$message = '<p>Vous avez bien été déconnecté.</p>';

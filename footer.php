@@ -1,4 +1,6 @@
 		<div class="footer foot">
+			<a title="Se connecter" class="top_link" style="display: inline;" href="connexion.php"><i class="glyphicon glyphicon-user"></i></a>
+			<a title="Deconnexion" class="deconnect_link" style="display: inline;" href="connexion.php?deco=1#popup1"><i class="glyphicon glyphicon-log-out"></i></a>
 			<div class="container">
 				<div class="row footer_bottom">
 					<div class="copy col-lg-4">
@@ -6,18 +8,12 @@
 			           <p>Site fictif</p>
 			        </div>
 			        <div class="copy col-lg-4">
-			           <a href="mentions_legales.php" class="mention">Mentions légales</a> |
+			           <a href="mentions_legales.php" class="mention">Mentions légales</a> 
 			           <?php 
-							if (!isset($_SESSION['pseudo'])) { echo "<a href='connexion.php'>Connexion</a></p>"; }
-	   						else { 	
-		 						if ( $data['rang'] == 2){ 
-		 							?><a href='admin.php'>Admin</a> <br /> <a href="gestionFormation.php">Gestion Formation</a> | <a href='connexion.php?deco=1#popup1'>Deconnexion</a></p>
+		 						if (isset($_SESSION['pseudo']) && $data['rang'] == 2){ 
+		 							?>| <a href='admin.php'>Admin</a> <br /> <a href="gestionFormation.php" style="padding-left: 40px;">Gestion Formation</a> 
 		 							<?php
 		 						}
-								else {
-				 					echo " <a href='connexion.php?deco=1#popup1'>Deconnexion</a></p>"; 
-								}
-						}
 			            ?>
 		            </div>
 		            <div class="col-lg-4">
