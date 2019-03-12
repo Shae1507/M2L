@@ -82,4 +82,12 @@ function nomFormation($id_formation)
 	$query->execute();
 	return $query;
 }
+
+function sqlDynTable($table)
+{
+	$con = con();
+	$query = $con->prepare("call sqlDynTable('$table')");
+	$query->execute();
+	return $query;
+}
 ?>
