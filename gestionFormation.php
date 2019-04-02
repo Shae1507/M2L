@@ -40,6 +40,8 @@ include 'functions.php';
         </div>
         </div>
       </div>
+      <div class="space">
+      </div>
   	</div>
   </div>
   <br />

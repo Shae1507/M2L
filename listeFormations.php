@@ -1,11 +1,10 @@
 <?php 
 include 'header.php';
 include 'access2.php';
+include 'functions.php';
 
-$con = new PDO('mysql:host=localhost;dbname=gestion_formations;charset=utf8', 'root', '');
 $pseudo = $_SESSION["pseudo"];
-$query=$con->prepare("SELECT * FROM formation, participant where participant.pseudo = '$pseudo' AND participant.id_formation = formation.id_formation"); 
-        $query->execute();
+$query = listeInscription($pseudo);
 ?>
 <title>Liste formations</title>
 <body>
@@ -34,8 +33,8 @@ $query=$con->prepare("SELECT * FROM formation, participant where participant.pse
         		?><tr class="modif">
         			<td class="cachee"><?=$donnees["id_formation"] ?></td>
 					<td><?=$donnees["description"]?></td>
-					<td><?=$donnees["debut_cours"]?></td>
-					<td><?=$donnees["fin_cours"]?></td>
+					<td><?=$donnees["date_debut"]?></td>
+					<td><?=$donnees["date_fin"]?></td>
 					<td><?=$donnees["cout"]?></td>
 				</tr>
 				<?php

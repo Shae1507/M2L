@@ -33,8 +33,8 @@ $query= formations();
         		?><tr>
         			<td class="cachee"><?=$donnees["id_formation"] ?></td>
 					<td><?=$donnees["description"]?></td>
-					<td><?=$donnees["debut_cours"]?></td>
-					<td><?=$donnees["fin_cours"]?></td>
+					<td><?=$donnees["date_debut"]?></td>
+					<td><?=$donnees["date_fin"]?></td>
 					<td><?=$donnees["cout"]?></td>
 					<td class="btnInscription"><form action="inscriptFormation.php?id_formation=<?= $donnees["id_formation"] ?>" method="post"><button class="btn" name="envoyer"><i class="glyphicon glyphicon-check"></i></button></form></td>
 				</tr>

@@ -21,8 +21,8 @@ if (isset($_POST['envoyer']))	{
         $con = con();
 	      $query=$con->prepare("UPDATE $table 
 	      						SET description ='$description',
-	      						debut_cours='$debut_cours', 
-	      						fin_cours='$fin_cours', 
+	      						date_debut='$debut_cours', 
+	      						date_fin='$fin_cours', 
 	      						cout='$cout',
 	      						id_organisateur='$id_organisateur'
 	      						where id_formation = $id ");
@@ -57,7 +57,7 @@ if (isset($_POST['envoyer']))	{
                							</div>
                						<label for="textarea" class="col-lg-2 control-label">Début cours :</label>
                   						<div class="col-lg-3">
-                   							<input type="textarea" name="debut_cours" class="form-control" id="textarea" value="<?= $donnees['debut_cours'] ?>">
+                   							<input type="textarea" name="debut_cours" class="form-control" id="textarea" value="<?= $donnees['date_debut'] ?>">
                							</div>
                					</div>
            					</div>
@@ -65,7 +65,7 @@ if (isset($_POST['envoyer']))	{
                 				<div class="form-group">
                   					<label for="textarea" class="col-lg-2 control-label lab">Fin cours :</label>
                   						<div class="col-lg-3">
-                   							<input type="textarea" name="fin_cours" class="form-control" id="textarea" value="<?=$donnees['fin_cours'] ?>">
+                   							<input type="textarea" name="fin_cours" class="form-control" id="textarea" value="<?=$donnees['date_fin'] ?>">
                							</div>
                						<label for="textarea" class="col-lg-2 control-label">Coût :</label>
                   						<div class="col-lg-3">

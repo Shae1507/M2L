@@ -24,10 +24,10 @@
 <li>Présentation du prestataire</li>
 </ul>
 </p></p></br>
-<input type="button" value="Télécharger" onclick="window.location='http://m2l.badji.fr/doc_m2l.zip';"></br></br>
+<button class="btn" onclick="window.location='http://m2l.badji.fr/doc_m2l.zip';">Télécharger</button></br></br>
 <h3 class="western">Application</h3></br>
 <p> Cliquez sur le bouton ci-dessous afin de télécharger le fichier au format ZIP (à décompresser) l'application.</p></br>
-<input type="button" value="Télécharger" onclick="window.location='http://m2l.badji.fr/apli_m2l.zip';">
+<button class="btn" onclick="window.location='http://m2l.badji.fr/apli_m2l.zip';">Télécharger</button>
 
 			   </div>
 		    </div>

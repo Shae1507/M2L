@@ -41,7 +41,7 @@ $table = $_GET['table'];
             </thead>
             <tbody>
              <?php
-             $res = sqlDynTable($table);
+             $res = getTable($table);
         	 while($donnees = $res->fetch())
         	 {
         	 	$donnees = array_unique($donnees);

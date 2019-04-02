@@ -86,6 +86,8 @@ if (isset($_POST['envoyer']))	{
 					</form>
 				</div>
 		   	</div>
+        <div class="space">
+        </div>
 	  	</div>
    	</div>
 

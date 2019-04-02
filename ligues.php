@@ -23,5 +23,7 @@
 	      	<br />
 		</div>
 	</div>
+	<div class="space">
+	</div>
 </div>
 <?php include 'footer.php'; ?>

@@ -21,7 +21,7 @@ function formations()
 function show()
 {
 	$con = con();
-	$req = $con->prepare('SHOW tables');
+	$req = $con->prepare('SHOW tables where tables_in_gestion_formations <> "membres"');
 	$req->execute();
 	return $req;
 }
@@ -87,6 +87,22 @@ function sqlDynTable($table)
 {
 	$con = con();
 	$query = $con->prepare("call sqlDynTable('$table')");
+	$query->execute();
+	return $query;
+}
+
+function listeInscription($pseudo)
+{
+	$con = con();
+	$query=$con->prepare("SELECT * FROM formation, participant where participant.pseudo = '$pseudo' AND participant.id_formation = formation.id_formation"); 
+    $query->execute();
+    return $query;
+}
+
+function annonces()
+{
+	$con = new PDO('mysql:host=localhost;dbname=m2l_bd1;charset=utf8', 'root', '');
+	$query = $con->prepare("SELECT * from annonce");
 	$query->execute();
 	return $query;
 }
